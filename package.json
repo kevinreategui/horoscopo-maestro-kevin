@@ -1,11 +1,8 @@
 {
   "name": "api-horoscopo-maestro",
   "version": "1.0.0",
-  "description": "Horóscopo diario con IA para el Maestro Kevin",
+  "description": "API Horóscopo Maestro Kevin",
   "main": "generar.js",
-  "scripts": {
-    "start": "node generar.js"
-  },
   "dependencies": {
     "@google/generative-ai": "^0.21.0"
   }
