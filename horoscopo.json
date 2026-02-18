@@ -1,4 +1,41 @@
 {
-  "fecha_actualizacion": "17/2/2026",
-  "signos": {}
+  "fecha_actualizacion": "18/2/2026",
+  "signos": {
+    "aries": {
+      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+    },
+    "tauro": {
+      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+    },
+    "geminis": {
+      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+    },
+    "cancer": {
+      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+    },
+    "leo": {
+      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+    },
+    "virgo": {
+      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+    },
+    "libra": {
+      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+    },
+    "escorpio": {
+      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+    },
+    "sagitario": {
+      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+    },
+    "capricornio": {
+      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+    },
+    "acuario": {
+      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+    },
+    "piscis": {
+      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+    }
+  }
 }
