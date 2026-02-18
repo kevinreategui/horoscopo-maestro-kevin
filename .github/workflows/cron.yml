@@ -28,11 +28,11 @@ jobs:
           git config --global user.name 'Robot Maestro Kevin'
           git config --global user.email 'bot@maestrokevin.com'
           
-          # La estrategia segura:
+          # Limpieza para evitar errores de sincronización
           git add horoscopo.json
-          git stash                          # Guarda el nuevo horóscopo en memoria
-          git pull origin main --rebase      # Trae tus cambios de VS Code
-          git stash pop                      # Recupera el horóscopo y lo pone encima
+          git stash || echo "Nada que guardar"
+          git pull origin main --rebase
+          git stash pop || echo "Nada que recuperar"
           
           git add horoscopo.json
           git commit -m "✨ Horóscopo actualizado $(date)" || echo "Sin cambios"
