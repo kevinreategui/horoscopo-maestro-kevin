@@ -2,40 +2,172 @@
   "fecha_actualizacion": "18/2/2026",
   "signos": {
     "aries": {
-      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+      "diario": "Hoy los astros te invitan a la calma y reflexión profunda.",
+      "semanal": "Una semana de grandes revelaciones se aproxima.",
+      "mensual": {
+        "amor": "Abre tu corazón.",
+        "dinero": "Llega prosperidad.",
+        "salud": "Cuida tu descanso."
+      },
+      "numero_suerte": 99,
+      "color": "Dorado",
+      "palabra_clave": "Paciencia",
+      "compatible_con": "Cáncer",
+      "desafio_dia": "Evita discusiones innecesarias."
     },
     "tauro": {
-      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+      "diario": "Hoy los astros te invitan a la calma y reflexión profunda.",
+      "semanal": "Una semana de grandes revelaciones se aproxima.",
+      "mensual": {
+        "amor": "Abre tu corazón.",
+        "dinero": "Llega prosperidad.",
+        "salud": "Cuida tu descanso."
+      },
+      "numero_suerte": 92,
+      "color": "Dorado",
+      "palabra_clave": "Paciencia",
+      "compatible_con": "Cáncer",
+      "desafio_dia": "Evita discusiones innecesarias."
     },
     "geminis": {
-      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+      "diario": "Hoy los astros te invitan a la calma y reflexión profunda.",
+      "semanal": "Una semana de grandes revelaciones se aproxima.",
+      "mensual": {
+        "amor": "Abre tu corazón.",
+        "dinero": "Llega prosperidad.",
+        "salud": "Cuida tu descanso."
+      },
+      "numero_suerte": 22,
+      "color": "Dorado",
+      "palabra_clave": "Paciencia",
+      "compatible_con": "Cáncer",
+      "desafio_dia": "Evita discusiones innecesarias."
     },
     "cancer": {
-      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+      "diario": "Hoy los astros te invitan a la calma y reflexión profunda.",
+      "semanal": "Una semana de grandes revelaciones se aproxima.",
+      "mensual": {
+        "amor": "Abre tu corazón.",
+        "dinero": "Llega prosperidad.",
+        "salud": "Cuida tu descanso."
+      },
+      "numero_suerte": 92,
+      "color": "Dorado",
+      "palabra_clave": "Paciencia",
+      "compatible_con": "Cáncer",
+      "desafio_dia": "Evita discusiones innecesarias."
     },
     "leo": {
-      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+      "diario": "Hoy los astros te invitan a la calma y reflexión profunda.",
+      "semanal": "Una semana de grandes revelaciones se aproxima.",
+      "mensual": {
+        "amor": "Abre tu corazón.",
+        "dinero": "Llega prosperidad.",
+        "salud": "Cuida tu descanso."
+      },
+      "numero_suerte": 47,
+      "color": "Dorado",
+      "palabra_clave": "Paciencia",
+      "compatible_con": "Cáncer",
+      "desafio_dia": "Evita discusiones innecesarias."
     },
     "virgo": {
-      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+      "diario": "Hoy los astros te invitan a la calma y reflexión profunda.",
+      "semanal": "Una semana de grandes revelaciones se aproxima.",
+      "mensual": {
+        "amor": "Abre tu corazón.",
+        "dinero": "Llega prosperidad.",
+        "salud": "Cuida tu descanso."
+      },
+      "numero_suerte": 15,
+      "color": "Dorado",
+      "palabra_clave": "Paciencia",
+      "compatible_con": "Cáncer",
+      "desafio_dia": "Evita discusiones innecesarias."
     },
     "libra": {
-      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+      "diario": "Hoy los astros te invitan a la calma y reflexión profunda.",
+      "semanal": "Una semana de grandes revelaciones se aproxima.",
+      "mensual": {
+        "amor": "Abre tu corazón.",
+        "dinero": "Llega prosperidad.",
+        "salud": "Cuida tu descanso."
+      },
+      "numero_suerte": 85,
+      "color": "Dorado",
+      "palabra_clave": "Paciencia",
+      "compatible_con": "Cáncer",
+      "desafio_dia": "Evita discusiones innecesarias."
     },
     "escorpio": {
-      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+      "diario": "Hoy los astros te invitan a la calma y reflexión profunda.",
+      "semanal": "Una semana de grandes revelaciones se aproxima.",
+      "mensual": {
+        "amor": "Abre tu corazón.",
+        "dinero": "Llega prosperidad.",
+        "salud": "Cuida tu descanso."
+      },
+      "numero_suerte": 94,
+      "color": "Dorado",
+      "palabra_clave": "Paciencia",
+      "compatible_con": "Cáncer",
+      "desafio_dia": "Evita discusiones innecesarias."
     },
     "sagitario": {
-      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+      "diario": "Hoy los astros te invitan a la calma y reflexión profunda.",
+      "semanal": "Una semana de grandes revelaciones se aproxima.",
+      "mensual": {
+        "amor": "Abre tu corazón.",
+        "dinero": "Llega prosperidad.",
+        "salud": "Cuida tu descanso."
+      },
+      "numero_suerte": 21,
+      "color": "Dorado",
+      "palabra_clave": "Paciencia",
+      "compatible_con": "Cáncer",
+      "desafio_dia": "Evita discusiones innecesarias."
     },
     "capricornio": {
-      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+      "diario": "Hoy los astros te invitan a la calma y reflexión profunda.",
+      "semanal": "Una semana de grandes revelaciones se aproxima.",
+      "mensual": {
+        "amor": "Abre tu corazón.",
+        "dinero": "Llega prosperidad.",
+        "salud": "Cuida tu descanso."
+      },
+      "numero_suerte": 84,
+      "color": "Dorado",
+      "palabra_clave": "Paciencia",
+      "compatible_con": "Cáncer",
+      "desafio_dia": "Evita discusiones innecesarias."
     },
     "acuario": {
-      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+      "diario": "Hoy los astros te invitan a la calma y reflexión profunda.",
+      "semanal": "Una semana de grandes revelaciones se aproxima.",
+      "mensual": {
+        "amor": "Abre tu corazón.",
+        "dinero": "Llega prosperidad.",
+        "salud": "Cuida tu descanso."
+      },
+      "numero_suerte": 2,
+      "color": "Dorado",
+      "palabra_clave": "Paciencia",
+      "compatible_con": "Cáncer",
+      "desafio_dia": "Evita discusiones innecesarias."
     },
     "piscis": {
-      "diario": "Los astros están en silencio para este signo. Intenta más tarde."
+      "diario": "Hoy los astros te invitan a la calma y reflexión profunda.",
+      "semanal": "Una semana de grandes revelaciones se aproxima.",
+      "mensual": {
+        "amor": "Abre tu corazón.",
+        "dinero": "Llega prosperidad.",
+        "salud": "Cuida tu descanso."
+      },
+      "numero_suerte": 98,
+      "color": "Dorado",
+      "palabra_clave": "Paciencia",
+      "compatible_con": "Cáncer",
+      "desafio_dia": "Evita discusiones innecesarias."
     }
   }
 }
