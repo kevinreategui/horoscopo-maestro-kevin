@@ -10,17 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Necesario para que el rebase funcione correctamente
+
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
+
       - run: npm install
+      
       - run: node generar.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - name: Guardar cambios
         run: |
           git config --global user.name 'Robot Maestro Kevin'
           git config --global user.email 'bot@maestrokevin.com'
+          git pull origin main --rebase # Esto evita el error de "rejected"
           git add horoscopo.json
           git commit -m "✨ Horóscopo actualizado $(date)" || echo "Sin cambios"
-          git push
+          git push origin main
