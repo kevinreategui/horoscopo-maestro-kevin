@@ -2,38 +2,33 @@ name: Robot Horoscopo Diario
 
 on:
   schedule:
-    - cron: '0 5 * * *' 
-  workflow_dispatch: 
+    - cron: '0 5 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # ← ESTO ES LO QUE FALTA
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0 
-
+          fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-
       - run: npm install
-      
       - run: node generar.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-
       - name: Guardar cambios
         run: |
           git config --global user.name 'Robot Maestro Kevin'
           git config --global user.email 'bot@maestrokevin.com'
-          
-          # Limpieza para evitar errores de sincronización
           git add horoscopo.json
           git stash || echo "Nada que guardar"
           git pull origin main --rebase
           git stash pop || echo "Nada que recuperar"
-          
           git add horoscopo.json
           git commit -m "✨ Horóscopo actualizado $(date)" || echo "Sin cambios"
           git push origin main
