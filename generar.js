@@ -1,23 +1,33 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require("@google/generative-ai");
 const fs = require("fs");
 const config = require("./config");
 const promptBuilder = require("./prompt");
 
 async function ejecutar() {
-  // Verificamos que la API KEY exista
   if (!process.env.GEMINI_API_KEY) {
-    console.error("❌ ERROR: No se encontró la GEMINI_API_KEY en las variables de entorno.");
+    console.error("❌ ERROR: Falta GEMINI_API_KEY");
     return;
   }
 
   const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-  const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
+  // 🛡️ Desactivamos filtros para que no bloquee el contenido místico
+  const safetySettings = [
+    { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_NONE },
+    { category: HarmCategory.HARM_CATEGORY_HATE_SPEECH, threshold: HarmBlockThreshold.BLOCK_NONE },
+    { category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT, threshold: HarmBlockThreshold.BLOCK_NONE },
+    { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_NONE },
+  ];
+
+  const model = genAI.getGenerativeModel({ 
+    model: "gemini-1.5-flash",
+    safetySettings 
+  });
   
-  // Fecha exacta para el archivo
-  const hoy = new Date().toLocaleDateString('es-ES', { timeZone: 'America/Lima' });
+  const hoy = new Date().toLocaleDateString('es-ES', { timeZone: config.zonaHoraria });
   const results = { fecha_actualizacion: hoy, signos: {} };
 
-  console.log(`🚀 Iniciando generación para el día: ${hoy}`);
+  console.log(`🚀 Generando destino para: ${hoy}`);
 
   for (const signo of config.signos) {
     try {
@@ -26,31 +36,34 @@ async function ejecutar() {
       const response = await result.response;
       let text = response.text();
 
-      // --- BLOQUE DE EXTRACCIÓN SEGURA ---
-      // Buscamos donde empieza el primer '{' y termina el último '}'
+      // Extractor de JSON para limpiar cualquier texto extra de la IA
       const inicio = text.indexOf('{');
       const fin = text.lastIndexOf('}');
-      
-      if (inicio === -1 || fin === -1) {
-        throw new Error("La IA no devolvió un formato JSON válido.");
-      }
+      if (inicio === -1 || fin === -1) throw new Error("Formato inválido");
 
       const jsonLimpio = text.substring(inicio, fin + 1);
-      // ------------------------------------
-
       results.signos[signo.toLowerCase()] = JSON.parse(jsonLimpio);
-      console.log(`✅ ${signo} procesado correctamente.`);
       
+      console.log(`✅ ${signo} procesado.`);
     } catch (e) {
       console.log(`❌ Error en ${signo}: ${e.message}`);
-      // Opcional: Guardar un mensaje de error por signo para que la web no rompa
-      results.signos[signo.toLowerCase()] = { diario: "Los astros están en silencio para este signo. Intenta más tarde." };
+      
+      // Datos de respaldo para que la web nunca esté vacía
+      results.signos[signo.toLowerCase()] = { 
+        diario: "Hoy los astros te invitan a la calma y reflexión profunda.",
+        semanal: "Una semana de grandes revelaciones se aproxima.",
+        mensual: { amor: "Abre tu corazón.", dinero: "Llega prosperidad.", salud: "Cuida tu descanso." },
+        numero_suerte: Math.floor(Math.random() * 99) + 1,
+        color: "Dorado",
+        palabra_clave: "Paciencia",
+        compatible_con: "Cáncer",
+        desafio_dia: "Evita discusiones innecesarias."
+      };
     }
   }
 
-  // Escribimos el archivo siempre, aunque algunos signos fallen
   fs.writeFileSync('horoscopo.json', JSON.stringify(results, null, 2));
-  console.log("✨ Archivo horoscopo.json generado con éxito.");
+  console.log("✨ API Horóscopo Maestro Kevin actualizada.");
 }
 
 ejecutar();
