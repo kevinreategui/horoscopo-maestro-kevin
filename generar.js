@@ -11,7 +11,6 @@ async function ejecutar() {
 
   const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-  // 🛡️ CONFIGURACIÓN DE SEGURIDAD TOTAL (BLOCK_NONE)
   const safetySettings = [
     { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_NONE },
     { category: HarmCategory.HARM_CATEGORY_HATE_SPEECH, threshold: HarmBlockThreshold.BLOCK_NONE },
@@ -19,11 +18,14 @@ async function ejecutar() {
     { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_NONE },
   ];
 
-  const model = genAI.getGenerativeModel({ 
-    model: "gemini-1.5-flash", // Modelo más rápido y menos restrictivo
-    safetySettings 
+  const model = genAI.getGenerativeModel({
+    model: "gemini-1.5-flash",
+    safetySettings,
+    generationConfig: {
+      responseMimeType: "application/json", // ← Fuerza respuesta JSON pura
+    }
   });
-  
+
   const hoy = new Date().toLocaleDateString('es-ES', { timeZone: config.zonaHoraria });
   const results = { fecha_actualizacion: hoy, signos: {} };
 
@@ -34,22 +36,32 @@ async function ejecutar() {
       const prompt = promptBuilder.construirPrompt(signo, hoy);
       const result = await model.generateContent(prompt);
       const response = await result.response;
-      let text = response.text();
+      const text = response.text();
 
-      // Limpieza de JSON para evitar textos basura de la IA
-      const inicio = text.indexOf('{');
-      const fin = text.lastIndexOf('}');
-      if (inicio === -1 || fin === -1) throw new Error("JSON Inválido");
+      console.log(`📝 Respuesta raw de ${signo}:`, text.substring(0, 100));
 
-      const jsonLimpio = text.substring(inicio, fin + 1);
-      results.signos[signo.toLowerCase()] = JSON.parse(jsonLimpio);
-      
+      // Intentar parsear directamente (con responseMimeType: application/json debería ser JSON limpio)
+      let parsed;
+      try {
+        parsed = JSON.parse(text);
+      } catch {
+        // Fallback: extraer el JSON manualmente
+        const inicio = text.indexOf('{');
+        const fin = text.lastIndexOf('}');
+        if (inicio === -1 || fin === -1) throw new Error(`No se encontró JSON en la respuesta: ${text.substring(0, 200)}`);
+        parsed = JSON.parse(text.substring(inicio, fin + 1));
+      }
+
+      results.signos[signo.toLowerCase()] = parsed;
       console.log(`✅ ${signo} canalizado.`);
+
+      // Pequeña pausa para no sobrecargar la API
+      await new Promise(r => setTimeout(r, 500));
+
     } catch (e) {
-      console.log(`⚠️ Error en ${signo}: ${e.message}`);
-      
-      // Respaldo por si un signo falla individualmente
-      results.signos[signo.toLowerCase()] = { 
+      console.error(`⚠️ Error en ${signo}: ${e.message}`);
+
+      results.signos[signo.toLowerCase()] = {
         diario: "Los astros te piden hoy calma y observación antes de actuar.",
         semanal: "Una semana para sembrar intenciones claras.",
         mensual: { amor: "Paciencia.", dinero: "Ahorro.", salud: "Meditación." },
