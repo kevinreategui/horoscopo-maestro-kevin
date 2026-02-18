@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # Necesario para que el rebase funcione correctamente
+          fetch-depth: 0 
 
       - uses: actions/setup-node@v3
         with:
@@ -27,7 +27,13 @@ jobs:
         run: |
           git config --global user.name 'Robot Maestro Kevin'
           git config --global user.email 'bot@maestrokevin.com'
-          git pull origin main --rebase # Esto evita el error de "rejected"
+          
+          # La estrategia segura:
+          git add horoscopo.json
+          git stash                          # Guarda el nuevo horóscopo en memoria
+          git pull origin main --rebase      # Trae tus cambios de VS Code
+          git stash pop                      # Recupera el horóscopo y lo pone encima
+          
           git add horoscopo.json
           git commit -m "✨ Horóscopo actualizado $(date)" || echo "Sin cambios"
           git push origin main
