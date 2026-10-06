@@ -1,133 +1,7 @@
 {
-  "fecha_actualizacion": "5/10/2026",
+  "fecha_actualizacion": "6/10/2026",
   "signos": {
     "aries": {
-      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
-      "semanal": "Una semana para sembrar intenciones claras.",
-      "mensual": {
-        "amor": "Paciencia.",
-        "dinero": "Ahorro.",
-        "salud": "Meditación."
-      },
-      "numero_suerte": 20,
-      "color": "Violeta",
-      "palabra_clave": "Intuición",
-      "compatible_con": "Leo",
-      "desafio_dia": "No te apresures."
-    },
-    "tauro": {
-      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
-      "semanal": "Una semana para sembrar intenciones claras.",
-      "mensual": {
-        "amor": "Paciencia.",
-        "dinero": "Ahorro.",
-        "salud": "Meditación."
-      },
-      "numero_suerte": 4,
-      "color": "Violeta",
-      "palabra_clave": "Intuición",
-      "compatible_con": "Leo",
-      "desafio_dia": "No te apresures."
-    },
-    "geminis": {
-      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
-      "semanal": "Una semana para sembrar intenciones claras.",
-      "mensual": {
-        "amor": "Paciencia.",
-        "dinero": "Ahorro.",
-        "salud": "Meditación."
-      },
-      "numero_suerte": 16,
-      "color": "Violeta",
-      "palabra_clave": "Intuición",
-      "compatible_con": "Leo",
-      "desafio_dia": "No te apresures."
-    },
-    "cancer": {
-      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
-      "semanal": "Una semana para sembrar intenciones claras.",
-      "mensual": {
-        "amor": "Paciencia.",
-        "dinero": "Ahorro.",
-        "salud": "Meditación."
-      },
-      "numero_suerte": 55,
-      "color": "Violeta",
-      "palabra_clave": "Intuición",
-      "compatible_con": "Leo",
-      "desafio_dia": "No te apresures."
-    },
-    "leo": {
-      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
-      "semanal": "Una semana para sembrar intenciones claras.",
-      "mensual": {
-        "amor": "Paciencia.",
-        "dinero": "Ahorro.",
-        "salud": "Meditación."
-      },
-      "numero_suerte": 86,
-      "color": "Violeta",
-      "palabra_clave": "Intuición",
-      "compatible_con": "Leo",
-      "desafio_dia": "No te apresures."
-    },
-    "virgo": {
-      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
-      "semanal": "Una semana para sembrar intenciones claras.",
-      "mensual": {
-        "amor": "Paciencia.",
-        "dinero": "Ahorro.",
-        "salud": "Meditación."
-      },
-      "numero_suerte": 21,
-      "color": "Violeta",
-      "palabra_clave": "Intuición",
-      "compatible_con": "Leo",
-      "desafio_dia": "No te apresures."
-    },
-    "libra": {
-      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
-      "semanal": "Una semana para sembrar intenciones claras.",
-      "mensual": {
-        "amor": "Paciencia.",
-        "dinero": "Ahorro.",
-        "salud": "Meditación."
-      },
-      "numero_suerte": 64,
-      "color": "Violeta",
-      "palabra_clave": "Intuición",
-      "compatible_con": "Leo",
-      "desafio_dia": "No te apresures."
-    },
-    "escorpio": {
-      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
-      "semanal": "Una semana para sembrar intenciones claras.",
-      "mensual": {
-        "amor": "Paciencia.",
-        "dinero": "Ahorro.",
-        "salud": "Meditación."
-      },
-      "numero_suerte": 57,
-      "color": "Violeta",
-      "palabra_clave": "Intuición",
-      "compatible_con": "Leo",
-      "desafio_dia": "No te apresures."
-    },
-    "sagitario": {
-      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
-      "semanal": "Una semana para sembrar intenciones claras.",
-      "mensual": {
-        "amor": "Paciencia.",
-        "dinero": "Ahorro.",
-        "salud": "Meditación."
-      },
-      "numero_suerte": 3,
-      "color": "Violeta",
-      "palabra_clave": "Intuición",
-      "compatible_con": "Leo",
-      "desafio_dia": "No te apresures."
-    },
-    "capricornio": {
       "diario": "Los astros te piden hoy calma y observación antes de actuar.",
       "semanal": "Una semana para sembrar intenciones claras.",
       "mensual": {
@@ -141,6 +15,132 @@
       "compatible_con": "Leo",
       "desafio_dia": "No te apresures."
     },
+    "tauro": {
+      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
+      "semanal": "Una semana para sembrar intenciones claras.",
+      "mensual": {
+        "amor": "Paciencia.",
+        "dinero": "Ahorro.",
+        "salud": "Meditación."
+      },
+      "numero_suerte": 44,
+      "color": "Violeta",
+      "palabra_clave": "Intuición",
+      "compatible_con": "Leo",
+      "desafio_dia": "No te apresures."
+    },
+    "geminis": {
+      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
+      "semanal": "Una semana para sembrar intenciones claras.",
+      "mensual": {
+        "amor": "Paciencia.",
+        "dinero": "Ahorro.",
+        "salud": "Meditación."
+      },
+      "numero_suerte": 51,
+      "color": "Violeta",
+      "palabra_clave": "Intuición",
+      "compatible_con": "Leo",
+      "desafio_dia": "No te apresures."
+    },
+    "cancer": {
+      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
+      "semanal": "Una semana para sembrar intenciones claras.",
+      "mensual": {
+        "amor": "Paciencia.",
+        "dinero": "Ahorro.",
+        "salud": "Meditación."
+      },
+      "numero_suerte": 29,
+      "color": "Violeta",
+      "palabra_clave": "Intuición",
+      "compatible_con": "Leo",
+      "desafio_dia": "No te apresures."
+    },
+    "leo": {
+      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
+      "semanal": "Una semana para sembrar intenciones claras.",
+      "mensual": {
+        "amor": "Paciencia.",
+        "dinero": "Ahorro.",
+        "salud": "Meditación."
+      },
+      "numero_suerte": 42,
+      "color": "Violeta",
+      "palabra_clave": "Intuición",
+      "compatible_con": "Leo",
+      "desafio_dia": "No te apresures."
+    },
+    "virgo": {
+      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
+      "semanal": "Una semana para sembrar intenciones claras.",
+      "mensual": {
+        "amor": "Paciencia.",
+        "dinero": "Ahorro.",
+        "salud": "Meditación."
+      },
+      "numero_suerte": 72,
+      "color": "Violeta",
+      "palabra_clave": "Intuición",
+      "compatible_con": "Leo",
+      "desafio_dia": "No te apresures."
+    },
+    "libra": {
+      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
+      "semanal": "Una semana para sembrar intenciones claras.",
+      "mensual": {
+        "amor": "Paciencia.",
+        "dinero": "Ahorro.",
+        "salud": "Meditación."
+      },
+      "numero_suerte": 35,
+      "color": "Violeta",
+      "palabra_clave": "Intuición",
+      "compatible_con": "Leo",
+      "desafio_dia": "No te apresures."
+    },
+    "escorpio": {
+      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
+      "semanal": "Una semana para sembrar intenciones claras.",
+      "mensual": {
+        "amor": "Paciencia.",
+        "dinero": "Ahorro.",
+        "salud": "Meditación."
+      },
+      "numero_suerte": 83,
+      "color": "Violeta",
+      "palabra_clave": "Intuición",
+      "compatible_con": "Leo",
+      "desafio_dia": "No te apresures."
+    },
+    "sagitario": {
+      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
+      "semanal": "Una semana para sembrar intenciones claras.",
+      "mensual": {
+        "amor": "Paciencia.",
+        "dinero": "Ahorro.",
+        "salud": "Meditación."
+      },
+      "numero_suerte": 14,
+      "color": "Violeta",
+      "palabra_clave": "Intuición",
+      "compatible_con": "Leo",
+      "desafio_dia": "No te apresures."
+    },
+    "capricornio": {
+      "diario": "Los astros te piden hoy calma y observación antes de actuar.",
+      "semanal": "Una semana para sembrar intenciones claras.",
+      "mensual": {
+        "amor": "Paciencia.",
+        "dinero": "Ahorro.",
+        "salud": "Meditación."
+      },
+      "numero_suerte": 20,
+      "color": "Violeta",
+      "palabra_clave": "Intuición",
+      "compatible_con": "Leo",
+      "desafio_dia": "No te apresures."
+    },
     "acuario": {
       "diario": "Los astros te piden hoy calma y observación antes de actuar.",
       "semanal": "Una semana para sembrar intenciones claras.",
@@ -149,7 +149,7 @@
         "dinero": "Ahorro.",
         "salud": "Meditación."
       },
-      "numero_suerte": 55,
+      "numero_suerte": 91,
       "color": "Violeta",
       "palabra_clave": "Intuición",
       "compatible_con": "Leo",
@@ -163,7 +163,7 @@
         "dinero": "Ahorro.",
         "salud": "Meditación."
       },
-      "numero_suerte": 54,
+      "numero_suerte": 98,
       "color": "Violeta",
       "palabra_clave": "Intuición",
       "compatible_con": "Leo",
